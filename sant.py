@@ -32,7 +32,15 @@ html = """
 
 ##
 
-names = ['one', 'two', 'three', 'four']
+names = [
+        'Siobhan',
+        'Connor',
+        'Noah',
+        'Asim',
+        'Olivia',
+        'Gill',
+        'Brenn'
+]
 
 def shuffle_check(n, r):
     rv = False
@@ -48,7 +56,7 @@ while sc:
     shuffle(recips)
     sc = shuffle_check(names, recips)
 
-print(names, recips)
+# print(names, recips)
 
 ##
 
@@ -56,3 +64,4 @@ for person_one, person_two in zip(names, recips):
     rstring = ''.join(choices(string.ascii_letters, k = 5))
     with open(f"Letters/{person_one}{rstring}.html", 'w') as html_file:
         html_file.write(html.format(person_one = person_one, person_two = person_two))
+        print(person_one + ': ' + f"https://crepuscularcremini.github.io/AVSCSSSBT/Letters/{person_one}{rstring}")
